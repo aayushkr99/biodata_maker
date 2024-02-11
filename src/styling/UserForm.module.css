@@ -1,0 +1,87 @@
+/* src/styling/UserForm.module.css */
+.user-form {
+  max-width: 700px;
+  width: 600px;
+  margin: 0 auto;
+  /* margin-top: 40px; */
+  border: 2px solid black;
+  /* align-items: center; */
+  /* background-color: aquamarine; */
+  border-radius: 30px;
+  padding: 30px;
+  background-image:url(/home/aayush/Desktop/biodata_client/public/watercolor-roses-background_79603-1167.avif);
+  /* background-image: url(https://img.freepik.com/premium-photo/close-up-colored-pencils-white-background_1048944-19498007.jpg?size=626&ext=jpg&ga=GA1.1.681224605.1686054669&semt=ais); */
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increase the gap for more spacing between label and input */
+  width: 70%;
+  align-self: center; 
+  margin-left: 0px;
+
+  /* background-color: blue; */
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bold;
+  text-align: left;
+  font-size: large;
+  color: black
+}
+
+.input,
+.textarea {
+  padding: 8px;
+  width: 40%;
+  height: 15px;
+  border-radius: 12px;
+  margin-left: 20px;
+}
+
+.button {
+  padding: 10px;
+  background-color: rgb(243, 116, 137);          /*  #4caf50;*/
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.formlayout {
+  display: flex;
+  flex-direction: row-reverse;
+
+  .profilePicture {
+  /* width: 150px;
+  height: 150px;
+  background-color: rgb(196, 247, 198);
+  border-radius: 50%; /* Make it circular */
+  margin: 20px 0;
+  /* overflow: hidden; */
+  /* border: 3px solid pink */
+}
+  /* background-color: rgb(28, 28, 90); */
+  /* margin-left: 0px; */
+}
+
+
+
+.profilePicture label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.profilePicture input {
+  display: none;
+}

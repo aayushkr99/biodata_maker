@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import SecondPage from "./component/SecondPage";
+import WelcomePage from "./component/WelcomePage";
 
 function App() {
+  const [isFormPage, setIsFormPage] = useState(false);
+  const [clicked, setClicked] = useState(null);
+  const handleClicked = (data) => {
+    setClicked(data)
+  }
+  const handleFormPage = (data) => {
+    setIsFormPage(data)
+  }
+  console.log("clicked value", clicked)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isFormPage && <SecondPage id={clicked.id} uploadImage= {clicked.uploadImage} handleFormPage = {handleFormPage}/>}
+      {!isFormPage && <WelcomePage setClicked = {handleClicked} setIsFormPage = {setIsFormPage} />}
     </div>
   );
 }
